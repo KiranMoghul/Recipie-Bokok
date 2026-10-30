@@ -56,7 +56,14 @@ shows the scaled amount, e.g. `Add the {water}` becomes "Add the 375 ml water".
 Times like `10 minutes` or `1 hour` turn into tap-to-start timers automatically, and
 `180°C` switches to °F when the reader chooses it.
 
-**Notes**: optional `- ` lines for tips.
+To add a tip under a step, put a line starting with `>` right after it:
+
+```
+1. Heat the {oil} in a heavy pan.
+   > Tip: Don't crowd the pan, or the meat steams instead of browning.
+```
+
+**Notes**: optional `- ` lines for general tips.
 
 ## Grams ↔ cups
 

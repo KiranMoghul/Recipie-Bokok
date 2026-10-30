@@ -36,13 +36,14 @@ Once washed, nixtamal must be ground and used the same day. To keep it for 2–3
 ## Steps
 
 1. Heat the {water} in a large stainless-steel or enamel pot. Once hot, add the {cal} and stir until it dissolves.
+   > Tip: Avoid aluminium pots. The alkaline water reacts with them.
 2. Add the {white corn} and {blue corn}, bring to the boil and cook for 40 minutes.
 3. Take the pot off the heat and leave it uncovered to rest overnight, or for at least 8 hours.
 4. Drain off the soaking liquid (the nejayote) and wash the corn well, rubbing off the loosened skins.
+   > Tip: From here the corn must be ground the same day, so only wash what you'll use.
 5. Grind the washed corn in a hand mill. Pass it through one, two or three times, until the dough is smooth enough to knead.
 6. Knead briefly, then cover and set aside. The masa is now ready for other recipes.
 
 ## Notes
 
 - Use food-grade cal (calcium hydroxide, also sold as pickling lime). Quicklime (calcium oxide) is a different, caustic product, so don't substitute it.
-- Avoid aluminium pots: the alkaline water reacts with them.

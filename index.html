@@ -7,7 +7,7 @@
   <meta name="description" content="Recipes by cuisine that scale to any number of people and switch between grams and cups.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -15,30 +15,36 @@
     <div class="wrap">
       <a class="brand" href="#">Recipe Book</a>
       <label class="search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes or ingredients" autocomplete="off">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search all recipes" aria-label="Search all recipes" autocomplete="off">
       </label>
+      <nav class="nav" aria-label="Main">
+        <a href="#" data-nav="home">Discover</a>
+        <a href="#saved" data-nav="saved">Saved</a>
+      </nav>
     </div>
   </header>
 
   <main id="app"><div class="wrap empty">Loading recipes…</div></main>
 
+  <footer class="site-foot"><div class="wrap"><span id="foot-name">Recipe Book</span>. Recipes belong to their original authors, credited on each page.</div></footer>
+
   <div class="cook" id="cook" hidden role="dialog" aria-modal="true" aria-labelledby="cook-title">
     <div class="cook-top">
       <strong id="cook-title"></strong>
       <div class="progress" aria-hidden="true"><span id="cook-bar"></span></div>
-      <button type="button" class="btn" id="cook-close">Exit</button>
+      <button type="button" class="pill" id="cook-close">Exit</button>
     </div>
     <div class="cook-main">
       <div class="inner">
         <div class="cook-step-no" id="cook-no"></div>
         <p class="cook-text" id="cook-text"></p>
-        <div class="cook-uses" id="cook-uses"></div>
+        <div id="cook-uses" style="display:grid;gap:12px"></div>
       </div>
     </div>
     <div class="cook-bottom">
-      <button type="button" class="btn" id="cook-prev">← Back</button>
-      <button type="button" class="btn primary" id="cook-next">Next step →</button>
+      <button type="button" class="pill" id="cook-prev">Back</button>
+      <button type="button" class="pill cook-btn" id="cook-next">Next step</button>
     </div>
   </div>
 

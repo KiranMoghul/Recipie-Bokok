@@ -131,8 +131,18 @@ function parseRecipe(file, cuisineSlug) {
     .filter((x) => /^[-*]\s+/.test(x.line))
     .map((x) => parseIngredient(x.line, x.group, rel));
 
-  const steps = (sections[stepKey] || [])
-    .map((x) => ({ text: x.line.replace(/^(\d+[.)]|[-*])\s+/, ""), group: x.group }));
+  // A line starting with ">" right after a step is that step's tip:
+  //   > Tip: Don't crowd the pan.
+  const steps = [];
+  (sections[stepKey] || []).forEach((x) => {
+    if (/^>/.test(x.line)) {
+      const tip = x.line.replace(/^>\s*(tip\s*:\s*)?/i, "");
+      if (steps.length) steps[steps.length - 1].tip = tip;
+      else errors.push(`${rel}: tip "${tip}" comes before the first step`);
+      return;
+    }
+    steps.push({ text: x.line.replace(/^(\d+[.)]|[-*])\s+/, ""), group: x.group, tip: "" });
+  });
 
   const notes = (sections[noteKey] || []).map((x) => x.line.replace(/^[-*]\s+/, ""));
 
