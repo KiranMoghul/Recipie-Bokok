@@ -81,8 +81,8 @@ Then open http://localhost:8000.
 ## Photos
 
 Save a photo next to the recipe with the same name, e.g. `recipes/mexican/nixtamal.jpg`
-for `nixtamal.md`, and it shows on the recipe and its card. Until then, a coloured
-placeholder is shown. Keep photos under about 500 KB so pages load fast on phones.
+for `nixtamal.md`, and it shows on the recipe and its card. Photos are optional:
+recipes without one simply show no image. Keep photos under about 500 KB so pages load fast on phones.
 
 ## Extra sections
 

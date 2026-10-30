@@ -103,16 +103,18 @@ function renderShelves(q) {
 }
 
 function photo(r) {
-  if (r.image) return `<img src="${esc(r.image)}" alt="${esc(r.title)}" loading="lazy">`;
-  return `<div class="ph" style="--swatch:${swatch(r.cuisineSlug)}" role="img" aria-label="No photo yet"><span>${esc(r.title.charAt(0))}</span></div>`;
+  // No photo: nothing is shown, and the layout closes up around it.
+  // A photo that fails to load removes itself the same way.
+  if (!r.image) return "";
+  return `<img src="${esc(r.image)}" alt="${esc(r.title)}" loading="lazy" onerror="this.parentNode.remove()">`;
 }
 
 function card(r) {
   const total = r.prep + r.cook + r.rest;
   const saved = store.get("saved", []).includes(r.id);
   return `
-    <article class="card">
-      <div class="card-img">${photo(r)}</div>
+    <article class="card${r.image ? "" : " no-img"}" style="--swatch:${swatch(r.cuisineSlug)}">
+      ${r.image ? `<div class="card-img">${photo(r)}</div>` : ""}
       <div class="card-body">
         <div class="kicker">${esc([r.cuisine, r.category].filter(Boolean).join(" · "))}</div>
         <h3><a href="#r-${r.id}">${esc(r.title)}</a></h3>
@@ -228,7 +230,7 @@ function openRecipe(id) {
         ${byline ? `<p class="byline">${byline}</p>` : ""}
         <div class="tags">${r.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
         <div><button type="button" class="btn primary" id="jump">↓ Jump to recipe</button></div>
-        <figure class="hero">${photo(r)}</figure>
+        ${r.image ? `<figure class="hero">${photo(r)}</figure>` : ""}
         <dl class="facts-strip">
           <div><dt>Yields</dt><dd>${esc(r.yield || yieldText)}</dd></div>
           ${r.prep ? `<div><dt>Prep time</dt><dd>${fmtMin(r.prep)}</dd></div>` : ""}
