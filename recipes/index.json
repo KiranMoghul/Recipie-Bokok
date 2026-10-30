@@ -1,0 +1,117 @@
+{
+  "generated": "2026-10-30T13:51:57.639Z",
+  "cuisines": [
+    {
+      "slug": "mexican",
+      "name": "Mexican",
+      "description": "Corn, chillies and slow-cooked sauces, starting from the masa that holds it all together."
+    }
+  ],
+  "recipes": [
+    {
+      "id": "mexican-nixtamal",
+      "cuisine": "Mexican",
+      "cuisineSlug": "mexican",
+      "title": "Nixtamal",
+      "category": "Starters",
+      "level": "Beginner",
+      "prep": 20,
+      "cook": 40,
+      "rest": 480,
+      "serves": 1,
+      "servesLabel": "batch",
+      "servesStep": 0.5,
+      "yield": "Fresh masa from 2 kg dried corn",
+      "tags": [
+        "vegan",
+        "gluten-free",
+        "base recipe"
+      ],
+      "description": "Dried corn cooked and soaked in lime water, then washed and ground into fresh masa. This is the base for tortillas, tamales and sopes.",
+      "image": "",
+      "author": "",
+      "nutrition": [],
+      "story": [
+        {
+          "title": "About this recipe",
+          "lines": [
+            "Nixtamalization is the step that turns dried corn into masa. Cooking the kernels in lime water loosens their tough skins, lets the ground corn hold together as a dough, and makes the corn more nutritious.",
+            "White and blue corn are cooked together here, but you can make either one on its own. Halve the batch and keep the same method."
+          ]
+        },
+        {
+          "title": "Make ahead & storage",
+          "lines": [
+            "Once washed, nixtamal must be ground and used the same day. To keep it for 2–3 days, leave the unwashed corn in its nejayote and wash only what you need."
+          ]
+        }
+      ],
+      "source": "Paloma Ortiz, Scoolinary",
+      "sourceUrl": "https://www.scoolinary.com/recipes/s/nitxamal",
+      "ingredients": [
+        {
+          "name": "white corn",
+          "amount": 1,
+          "unit": "kg",
+          "note": "dried",
+          "group": null,
+          "id": "white-corn"
+        },
+        {
+          "name": "blue corn",
+          "amount": 1,
+          "unit": "kg",
+          "note": "dried",
+          "group": null,
+          "id": "blue-corn"
+        },
+        {
+          "name": "cal (slaked lime / calcium hydroxide)",
+          "amount": 20,
+          "unit": "g",
+          "note": "food grade",
+          "group": null,
+          "id": "cal-slaked-lime-calcium-hydroxide"
+        },
+        {
+          "name": "water",
+          "amount": 4,
+          "unit": "l",
+          "note": null,
+          "group": null,
+          "id": "water"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Heat the {water} in a large stainless-steel or enamel pot. Once hot, add the {cal} and stir until it dissolves.",
+          "group": null
+        },
+        {
+          "text": "Add the {white corn} and {blue corn}, bring to the boil and cook for 40 minutes.",
+          "group": null
+        },
+        {
+          "text": "Take the pot off the heat and leave it uncovered to rest overnight, or for at least 8 hours.",
+          "group": null
+        },
+        {
+          "text": "Drain off the soaking liquid (the nejayote) and wash the corn well, rubbing off the loosened skins.",
+          "group": null
+        },
+        {
+          "text": "Grind the washed corn in a hand mill. Pass it through one, two or three times, until the dough is smooth enough to knead.",
+          "group": null
+        },
+        {
+          "text": "Knead briefly, then cover and set aside. The masa is now ready for other recipes.",
+          "group": null
+        }
+      ],
+      "notes": [
+        "Use food-grade cal (calcium hydroxide, also sold as pickling lime). Quicklime (calcium oxide) is a different, caustic product, so don't substitute it.",
+        "Avoid aluminium pots: the alkaline water reacts with them."
+      ]
+    }
+  ]
+}
